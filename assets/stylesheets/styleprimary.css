@@ -36,7 +36,7 @@ header {
 
 header h1 {
     color: var(--secondary-color);
-    font-size: 40px;
+    font-size: 30px;
     margin: 0 10px;
 }
 header nav {
@@ -58,8 +58,7 @@ header nav ul li {
 header nav ul li a {
     text-decoration: none;
     margin: 0 10px; 
-    font-size: 2.5vw;
-    width: 100%;
+
 }
 
 
@@ -78,18 +77,22 @@ header h1 a, a:visited, a:hover, a:active {
 
 /* hero start */
 .hero-img {
-    background-image: url("./assets/images/hero-img.jpg");
+    background-image: url("../images/hero-img.jpg");
     background-size: cover;
     background-position: center;
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
     background-attachment: fixed;
-    margin: 10px;
+    height: 400px;
+    width: 100%;
+    align-items: flex-end;
+    justify-content: flex-end;
 }
 
 .hero-img h3 {
-    justify-content: end;
+    color: var(--tertiary-color);
+    margin: 70px;
+    display: flex;
 }
 /* hero end */
 
@@ -107,6 +110,10 @@ header h1 a, a:visited, a:hover, a:active {
 
 
 /* work start */
+.project-grid-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
 
 /* work end */
 
