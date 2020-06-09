@@ -103,7 +103,7 @@ header h1 a, a:visited, a:hover, a:active {
 
 /*article grid start */
 
-article {
+main {
     display: inline-grid;
     align-items: center;
     width: 80%;
@@ -114,7 +114,7 @@ article {
     padding-top: 50px;
 }
 
-.article-header {
+.main-header {
     width: 20%;
     border-right: 5px solid var(--secondary-color);
     display: flex;
@@ -221,7 +221,7 @@ article {
         height: 300px;
         align-items: center;
     }
-    article h2 {
+    main h2 {
         font-size: 40px;
     }
 }
