@@ -17,10 +17,6 @@ body {
 body p {
     font-size: 18px;
 }
-body h2 {
-    font-size: 50px;
-    font-weight: bold;
-}
 /* header start */
 header {
     background-color: var(--primary-color);
@@ -30,20 +26,24 @@ header {
     flex-wrap: wrap;
     position: sticky;
     z-index: 9999;
-    padding: 20px;
-    top: 0;
 }
 
 header h1 {
+    font-weight: bold;
+    font-size: 34px;
+    padding: 10px 15px;
+    margin: 0;    
     color: var(--secondary-color);
-    font-size: 30px;
-    margin: 0 10px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
+
+header a {
+    text-decoration: none;
+    color: var(--primary-color)
+}
+
 header nav {
-    display: flex;
-    flex-wrap: wrap;
-    font-size: 25px;
-    margin: 10px;
+    padding: 10px 15px;
 }
 header nav ul {
     display: flex;
@@ -52,26 +52,28 @@ header nav ul {
     align-items: center;
     list-style: none;
 }
-header nav ul li {
-    display: inline-flex;
-}
+
 header nav ul li a {
-    text-decoration: none;
-    margin: 0 10px; 
-
+    padding: 0 20px;
+    font-weight: lighter;
+    font-size: 2vw;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    align-self: center;
 }
 
-
+header nav ul li a:hover {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    border-radius: 15px;
+    text-shadow: none;
+    font-size: 30px;
+}
 
 header h1 a, a:visited, a:hover, a:active {
     color: inherit;
     text-decoration: none;
   }
 /* header end */
-
-
-
-
 
 
 
@@ -99,15 +101,36 @@ header h1 a, a:visited, a:hover, a:active {
 
 
 
+/*article grid start */
 
+article {
+    display: inline-grid;
+    align-items: center;
+    width: 80%;
+    justify-content: space-between;
+    margin: 0 10%;
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding-top: 50px;
+}
+
+.article-header {
+    width: 20%;
+    border-right: 5px solid var(--secondary-color);
+    display: flex;
+    font-size: 50px;
+    text-align: right;
+}
+.column2 {
+    flex-wrap: wrap;
+}
+/* article grid end*/
 
 
 /* about me start */
 .about-me-section {
-    display: flex;
-    width: 80%;
-    justify-content: space-around;
-    padding: 20px;
+    display: inline-grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 /* about me end */
 
@@ -117,25 +140,21 @@ header h1 a, a:visited, a:hover, a:active {
 
 /* work start */
 .work-section {
-    display: flex;
-    width: 80%;
-    justify-content: space-around;
-    padding: 20px;
+    display: inline-grid;
+    grid-template-columns: repeat(2,1fr); 
 
 }
 .project-grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
+    grid-gap: 20px;
 }
 .work-section h2 {
-    border-right: 4px solid var(--secondary-color);
-    padding-right: 30px;
+ 
 }
 .project-grid-item {
-    border: 2px solid var(--tertiary-color);
-    justify-content: space-between;
-    margin: 10px;
+    
 }
 
 /* work end */
@@ -147,16 +166,62 @@ header h1 a, a:visited, a:hover, a:active {
 
 /* contact me start */
 .contact-me-section {
-    display: flex;
-    width: 80%;
-    justify-content: space-around;
-    padding: 20px;
+    display: inline-grid;
+    grid-template-columns: repeat(2, 1fr); 
 }
 
 .contact-header {
-    border-right: 4px solid var(--secondary-color);
-    padding-right: 30px;
+   
 }
 
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
 
+.contact-info a, a:visited, a:active {
+    color: inherit;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    border-radius: 5px;
+    text-shadow: none;
+    padding: 1px;
+    font-size: large;
+}
 /* contact me end */
+
+/* media queries start*/
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+    header {
+        padding-bottom: 0;
+        justify-content: center;
+    }
+    header h1 {
+        width: 100%;
+        text-align: center;
+    }
+    header nav ul {
+        margin-top: 20px;
+        width: 100%;
+        justify-content: center;
+    }
+    header nav ul li a {
+        font-size: 20px;
+    }
+    .hero-img {
+        justify-content: center;
+        height: 300px;
+        align-items: center;
+    }
+    article h2 {
+        font-size: 40px;
+    }
+}
