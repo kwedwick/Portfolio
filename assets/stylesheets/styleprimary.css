@@ -106,9 +106,8 @@ header h1 a, a:visited, a:hover, a:active {
 .about-me-section {
     display: flex;
     width: 80%;
-    justify-content: center;
+    justify-content: space-around;
     padding: 20px;
-    flex-wrap: wrap;
 }
 /* about me end */
 
@@ -118,15 +117,25 @@ header h1 a, a:visited, a:hover, a:active {
 
 /* work start */
 .work-section {
-    display: grid;
+    display: flex;
     width: 80%;
-    justify-content: center;
+    justify-content: space-around;
     padding: 20px;
+
 }
 .project-grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
+}
+.work-section h2 {
+    border-right: 4px solid var(--secondary-color);
+    padding-right: 30px;
+}
+.project-grid-item {
+    border: 2px solid var(--tertiary-color);
+    justify-content: space-between;
+    margin: 10px;
 }
 
 /* work end */
@@ -137,5 +146,17 @@ header h1 a, a:visited, a:hover, a:active {
 
 
 /* contact me start */
+.contact-me-section {
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.contact-header {
+    border-right: 4px solid var(--secondary-color);
+    padding-right: 30px;
+}
+
 
 /* contact me end */
