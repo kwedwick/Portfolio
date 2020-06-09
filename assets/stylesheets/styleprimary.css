@@ -5,9 +5,10 @@
 }
 
 :root {
-    --primary-color: #3f444d;
+    --primary-color: #1f2021;
     --secondary-color: #c95e16;
     --tertiary-color: #97e4e8;
+    --hover-text-color: black;
 }
 body {
     color: var(--secondary-color);
@@ -52,25 +53,31 @@ header nav ul {
     justify-content: space-between;
     align-items: center;
     list-style: none;
+    
+}
+
+.header-nav-list li {
+    padding-bottom: 5px;
+    border-bottom: 4px solid var(--tertiary-color);
+    justify-content: space-between;
+    margin: 0 20px;
 }
 
 header nav ul li a {
-    padding: 0 20px;
     font-weight: lighter;
     font-size: 2vw;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 1);
     align-self: center;
 }
 
 header nav ul li a:hover {
     background: var(--secondary-color);
-    color: var(--primary-color);
+    color: var(--hover-text-color);
     border-radius: 15px;
     text-shadow: none;
-    font-size: 30px;
 }
 
-header h1 a, a:visited, a:hover, a:active {
+header h1 a, a:visited, a:active {
     color: inherit;
     text-decoration: none;
   }
@@ -106,7 +113,7 @@ header h1 a, a:visited, a:hover, a:active {
 
 main {
     display: grid;
-    width: 80%;
+    width: 90%;
     margin: 0 10%;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: repeat(3, 1fr);
@@ -120,19 +127,18 @@ main {
     text-align: right;
     grid-column: 1/ span 1;
     padding: 2px;
+    align-items: flex-start;
+    padding-right: 10px;
 }
 .body-grid-item {
     grid-column: 2/ span 1;
-    padding: 10px
+    margin: 0 30px 10px 10px;    
 }
 /* article grid end*/
 
 
 /* about me start */
-.about-me-section {
-    display: inline-grid;
-    grid-template-columns: repeat(2, 1fr);
-}
+
 /* about me end */
 
 
@@ -176,8 +182,8 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
     list-style: none;
+    text-align: center;
 }
 
 .contact-info a, a:visited, a:active {
@@ -185,9 +191,19 @@ main {
     text-decoration: none;
 }
 
+.ul-body {
+    align-self: center;
+}
+
+.ul-body li {
+    padding-bottom: 5px;
+    border-bottom: 4px solid var(--tertiary-color);
+    margin: 0 10px;
+}
+
 .contact-info a:hover {
     background: var(--secondary-color);
-    color: var(--primary-color);
+    color: var(--hover-text-color);
     border-radius: 5px;
     text-shadow: none;
     padding: 1px;
