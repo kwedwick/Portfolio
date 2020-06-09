@@ -25,6 +25,7 @@ header {
     justify-content: space-between;
     flex-wrap: wrap;
     position: sticky;
+    position: -webkit-sticky;
     z-index: 9999;
 }
 
@@ -93,7 +94,7 @@ header h1 a, a:visited, a:hover, a:active {
 
 .hero-img h3 {
     color: var(--tertiary-color);
-    margin: 70px;
+    margin: 35px 35px;
     display: flex;
     font-size: 40px;
 }
@@ -104,25 +105,25 @@ header h1 a, a:visited, a:hover, a:active {
 /*article grid start */
 
 main {
-    display: inline-grid;
-    align-items: center;
+    display: grid;
     width: 80%;
-    justify-content: space-between;
     margin: 0 10%;
+    grid-template-columns: 1fr 4fr;
     grid-template-rows: repeat(3, 1fr);
     grid-gap: 50px;
     padding-top: 50px;
 }
 
-.main-header {
-    width: 20%;
+.header-grid-item {
     border-right: 5px solid var(--secondary-color);
-    display: flex;
     font-size: 50px;
     text-align: right;
+    grid-column: 1/ span 1;
+    padding: 2px;
 }
-.column2 {
-    flex-wrap: wrap;
+.body-grid-item {
+    grid-column: 2/ span 1;
+    padding: 10px
 }
 /* article grid end*/
 
@@ -149,9 +150,6 @@ main {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     grid-gap: 20px;
-}
-.work-section h2 {
- 
 }
 .project-grid-item {
     
@@ -220,6 +218,9 @@ main {
         justify-content: center;
         height: 300px;
         align-items: center;
+    }
+    .hero-img h3 {
+        margin: auto;
     }
     main h2 {
         font-size: 40px;
