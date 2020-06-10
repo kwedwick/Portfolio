@@ -14,9 +14,7 @@ body {
     color: var(--secondary-color);
     background-color: var(--primary-color);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-body p {
-    font-size: 18px;
+
 }
 /* header start */
 header {
@@ -121,7 +119,6 @@ main {
     padding-top: 50px;
     flex-wrap: wrap;
 }
-
 .header-grid-item {
     border-right: 5px solid var(--secondary-color);
     font-size: 50px;
@@ -136,15 +133,11 @@ main {
 }
 /* main grid css end*/
 
-
 /* about me start */
 .about-me-text p {
     font-size: 18px;
 }
 /* about me end */
-
-
-
 
 
 /* work start */
@@ -195,18 +188,10 @@ main {
 /* work end */
 
 
-
-
-
-
 /* contact me start */
 .contact-me-section {
     display: inline-grid;
     grid-template-columns: repeat(2, 1fr); 
-}
-
-.contact-header {
-   
 }
 
 .contact-info {
@@ -246,6 +231,9 @@ main {
 /* media queries start*/
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
 @media screen and (max-width: 980px) {
+    html {
+        width: 100%;
+    }
     header {
         padding-bottom: 0;
         justify-content: center;
@@ -270,7 +258,19 @@ main {
     .hero-img h3 {
         margin: auto;
     }
+    main {
+        width: auto;
+        margin: 10px 0;
+        padding: 0;
+    }
     main h2 {
         font-size: 40px;
     }
+}
+@media screen and (max-width: 768) {
+    main {
+        display: flex;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }       
 }
