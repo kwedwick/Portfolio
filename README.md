@@ -44,6 +44,7 @@ First step was to craft all the HTML that I would need to sculpt using CSS.
 
 1. The major issue I had was the images linked to a class. I would revamp the HTML and CSS for better manipulation in the future. Unfortuately, I don't have enough time before the deadline to devote to this change. I would create two divs, one for img and one for text, and then using one CSS img class, I would use that to use transition/opacity/blur effects without it blanket covered the whole single "div" grid-item like it does now.
 2. There may be a "head nav a" text color upon first load. I can no longer test this because it's now cached somewhere. Would need to figure out how to delete cache to reload the page fresh.
+3. I didn't know to name my pre-work HTML files as index.html - so they are presently not loading on the live deployment. I will fix that later.
 
 ## Screenshot
 
