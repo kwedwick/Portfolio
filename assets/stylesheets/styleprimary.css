@@ -175,14 +175,15 @@ main {
     color: inherit;
 }
 
-.project-grid-item:hover {
-    webkit-filter: blur(2px); /* Chrome, Safari, Opera */
-    filter: blur(2px);
-}
 
-.project-grid-item::after{
-    content: "";
-    position: absolute;
+.project-grid-item:hover p {
+    position: relative;
+    display: block;
+    color: #ffffff;
+    font-weight: bold;
+    z-index: 9999999;
+    text-align: center;
+    transition: .4s ease-in-out;
 }
 
 .project1 {
@@ -190,6 +191,7 @@ main {
     background-size: cover;
     grid-column: 1 / span 2;
     grid-row: 1 /span 2;
+    
 }
 .project2 {
     background-image: url(../images/hello-world.jpg);
